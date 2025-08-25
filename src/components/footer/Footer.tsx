@@ -1,4 +1,3 @@
-import React from "react"
 import Liste from "../liste/Liste"
 
 export default function Footer() {

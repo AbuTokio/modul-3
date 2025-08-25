@@ -18,10 +18,6 @@ function App() {
 
   // Hier kommen die Funktionen und Hooks rein.
 
-  function sayHello() {
-    console.log("Hello World!")
-  }
-
   return (
     // <></> - Das ist ein sogenanntes React Fragment. React benötigt diese Syntax, sonst meckert es rum. Im HTML DOM wird das aber nicht angezeigt. Wir können also keine Class oder Ähnliches vergeben.
     <>

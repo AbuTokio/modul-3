@@ -1,4 +1,3 @@
-import React from "react"
 import Liste from "../../components/liste/Liste"
 import Header from "../../components/header/Header"
 
