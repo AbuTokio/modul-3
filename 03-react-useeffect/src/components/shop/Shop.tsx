@@ -1,8 +1,11 @@
 import type React from "react"
 import type { Product } from "../../interfaces/Product"
 import { useEffect, useState } from "react"
+import Loader from "../loader/Loader"
+import ProductItem from "../productItem/ProductItem"
+import "./Shop.css"
 
-export interface ShopProps {
+interface ShopProps {
   warenkorb: Product[]
   setWarenkorb: React.Dispatch<React.SetStateAction<Product[]>>
 }
@@ -31,7 +34,22 @@ export default function Shop(props: ShopProps) {
   return (
     <div>
       <h2>Shop</h2>
-      {megaData ? <p>Map</p> : <p>Loading...</p>}
+      {megaData ? (
+        <>
+          <div className="product-container">
+            {megaData.map((itemObject: Product) => {
+              return (
+                <div key={itemObject.id}>
+                  <h4>Product</h4>
+                  <ProductItem itemObject={itemObject} warenkorb={props.warenkorb} setWarenkorb={props.setWarenkorb} />
+                </div>
+              )
+            })}
+          </div>
+        </>
+      ) : (
+        <Loader />
+      )}
     </div>
   )
 }
