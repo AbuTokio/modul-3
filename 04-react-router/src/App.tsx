@@ -5,6 +5,9 @@ import About from "./pages/About"
 import Contact from "./pages/Contact"
 import Layout from "./components/Layout"
 import BlogOverview from "./pages/BlogOverview"
+import BlogDetail from "./pages/BlogDetail"
+import PokemonOverview from "./pages/PokemonOverview"
+import PokemonDetail from "./pages/PokemonDetail"
 
 const router = createBrowserRouter([
   {
@@ -29,7 +32,15 @@ const router = createBrowserRouter([
       },
       {
         path: "/blog/:slug",
-        element: <div>Detailseite</div>,
+        Component: BlogDetail,
+      },
+      {
+        path: "/pokemon",
+        Component: PokemonOverview,
+      },
+      {
+        path: "/pokemon/:id",
+        Component: PokemonDetail,
       },
       {
         path: "/contact",

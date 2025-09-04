@@ -7,6 +7,7 @@ export default function Header() {
         <NavigationLink to="/" label="Home" />
         <NavigationLink to="/about" label="About" />
         <NavigationLink to="/blog" label="Blog" />
+        <NavigationLink to="/pokemon" label="Pokémon" />
         <NavigationLink to="/contact" label="Contact" />
       </nav>
     </header>
